@@ -265,15 +265,69 @@ footer { margin-top:3rem; padding:2rem 2.5rem; border-top:1px solid var(--border
 ::-webkit-scrollbar-track { background:transparent; }
 ::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
 
+/* ===== BOTTOM NAV (mobile) ===== */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(12,12,15,0.96);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  padding: 0.5rem 0 calc(0.5rem + env(safe-area-inset-bottom));
+}
+body.light-mode .bottom-nav { background: rgba(245,244,240,0.96); }
+.bottom-nav-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottom-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  transition: color 0.2s;
+  min-width: 56px;
+}
+.bottom-tab .bt-icon { font-size: 1.2rem; line-height: 1; }
+.bottom-tab:hover { color: var(--text); }
+.bottom-tab.active { color: var(--accent); }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width:900px) {
   nav { padding:.8rem 1.2rem; }
   .nav-center { display:none; }
   .hero-content { padding:3rem 1.5rem; }
   main { padding:1.5rem 1.2rem 0; }
+  main#myListContent,
+  main#searchContent { padding-top: calc(60px + 1.5rem); }
   .movies-grid { grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:.9rem; }
+  /* mostrar bottom nav */
+  .bottom-nav { display: block; }
+  /* espacio para que el contenido no quede tapado por el bottom nav */
+  body { padding-bottom: 70px; }
 }
 @media (max-width:600px) {
+  /* navbar simplificado: solo logo + búsqueda + usuario */
+  nav { padding:.7rem 1rem; gap:.5rem; }
+  .nav-right { gap:.4rem; }
+  .search-box input { width:130px; font-size:.75rem; padding:.4rem 1.8rem; }
+  .search-box input:focus { width:160px; }
+  #authButtons { gap:.3rem; }
+  .btn-auth { padding:.38rem .7rem; font-size:.72rem; }
+  .btn-auth:first-child { display:none; } /* ocultar "Iniciar sesión", dejar solo "Registrarse" */
+  .user-btn { padding:.3rem .6rem .3rem .4rem; }
+  #userNameNav { display:none; }
   .hero { height:80vh; }
   .hero-title { font-size:1.8rem; }
   .hero-desc { display:none; }
