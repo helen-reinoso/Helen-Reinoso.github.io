@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helen Reinoso · Dev Full Stack</title>
+<meta name="description" content="Portafolio de Helen Reinoso, estudiante de Desarrollo y Gestión de Software en Panamá.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d0e0f;--bg2:#141516;--bg3:#1c1d1f;
+  --text:#e8e4dc;--muted:#7a776f;--soft:#4a4845;
+  --accent:#c9a84c;--accent2:#8bb8a0;--accent3:#a89fd4;
+  --border:#252523;--card:#181918;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(13,14,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;letter-spacing:0.08em;text-transform:uppercase;color:var(--text)}
+.logo em{font-style:italic;color:var(--accent)}
+nav ul{list-style:none;display:flex;gap:2.5rem}
+nav ul li a{color:var(--muted);text-decoration:none;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
+nav ul li a:hover{color:var(--accent)}
+.nav-cta{background:transparent;color:var(--accent);padding:0.45rem 1.2rem;border-radius:3px;font-size:0.78rem;font-weight:400;cursor:pointer;border:1px solid rgba(201,168,76,0.4);font-family:'Outfit',sans-serif;transition:all 0.2s;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none}
+.nav-cta:hover{background:rgba(201,168,76,0.08);border-color:var(--accent)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:6rem 3rem 3rem;position:relative}
+.hero-line{position:absolute;top:0;bottom:0;left:3rem;width:1px;background:linear-gradient(to bottom,transparent,var(--border) 20%,var(--border) 80%,transparent);pointer-events:none}
+.hero-content{padding-left:3rem}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp 0.8s 0.2s forwards}
+.hero-eyebrow::before{content:'';display:inline-block;width:30px;height:1px;background:var(--accent);opacity:0.6}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6rem);font-weight:300;line-height:1;letter-spacing:-0.01em;margin-bottom:0.3rem;opacity:0;animation:fadeUp 0.8s 0.35s forwards}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:300;font-style:italic;color:var(--muted);margin-bottom:2.5rem;letter-spacing:0.02em;opacity:0;animation:fadeUp 0.8s 0.5s forwards}
+.hero-sub{font-size:0.95rem;color:var(--muted);line-height:1.85;max-width:500px;margin-bottom:3rem;font-weight:300;opacity:0;animation:fadeUp 0.8s 0.65s forwards}
+.hero-actions{display:flex;gap:1rem;margin-bottom:5rem;opacity:0;animation:fadeUp 0.8s 0.8s forwards}
+.btn-gold{background:var(--accent);color:var(--bg);padding:0.8rem 2rem;border-radius:3px;font-weight:500;cursor:pointer;border:none;font-family:'Outfit',sans-serif;font-size:0.85rem;letter-spacing:0.05em;transition:opacity 0.2s;text-decoration:none;display:inline-block}
+.btn-gold:hover{opacity:0.85}
+.btn-ghost{background:transparent;color:var(--text);padding:0.8rem 2rem;border-radius:3px;font-weight:300;cursor:pointer;border:1px solid var(--border);font-family:'Outfit',sans-serif;font-size:0.85rem;letter-spacing:0.05em;transition:border-color 0.2s;text-decoration:none;display:inline-block}
+.btn-ghost:hover{border-color:var(--muted)}
+.hero-stats{display:flex;gap:4rem;padding-top:2rem;border-top:1px solid var(--border);opacity:0;animation:fadeUp 0.8s 0.95s forwards}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--text);line-height:1}
+.stat-num sup{font-size:1rem;color:var(--accent)}
+.stat-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem}
+
+/* SECTIONS */
+.section{padding:6rem 3rem}
+.sec-header{display:flex;align-items:center;gap:2rem;margin-bottom:3.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.sec-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--accent);opacity:0.7}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;letter-spacing:0.05em}
+.sec-line{flex:1;height:1px;background:var(--border)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-text{font-size:0.92rem;color:var(--muted);line-height:1.9;font-weight:300}
+.about-text p{margin-bottom:1.2rem}
+.about-text strong{color:var(--text);font-weight:500}
+.skills-section{margin-top:2rem}
+.skills-label{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--soft);margin-bottom:0.8rem}
+.skills-wrap{display:flex;flex-wrap:wrap;gap:0.5rem}
+.sk{font-size:0.78rem;padding:0.3rem 0.7rem;background:var(--bg3);border:1px solid var(--border);border-radius:3px;color:var(--muted);transition:all 0.2s;cursor:default}
+.sk:hover{border-color:rgba(201,168,76,0.3);color:var(--accent)}
+.sk.main{border-color:rgba(201,168,76,0.25);color:var(--accent);background:rgba(201,168,76,0.06)}
+.about-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.8rem}
+.about-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--accent);margin-bottom:1rem}
+.about-detail{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.83rem}
+.about-detail:last-child{border-bottom:none}
+.about-detail span:first-child{color:var(--soft);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase}
+.about-detail span:last-child{color:var(--text)}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.project-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:2rem;transition:border-color 0.3s,transform 0.3s;cursor:pointer;position:relative;overflow:hidden}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
+.project-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-4px)}
+.project-card:hover::before{opacity:1}
+.project-card.featured{border-color:rgba(201,168,76,0.2)}
+.project-card.featured::before{opacity:0.5}
+.pc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem}
+.pc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.85rem;color:var(--muted)}
+.pc-status-live{font-size:0.68rem;color:var(--accent2);letter-spacing:0.05em;padding:0.2rem 0.5rem;border:1px solid rgba(139,184,160,0.2);border-radius:2px}
+.pc-status-wip{font-size:0.68rem;color:var(--accent3);letter-spacing:0.05em;padding:0.2rem 0.5rem;border:1px solid rgba(168,159,212,0.2);border-radius:2px}
+.pc-featured-badge{font-size:0.65rem;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase;padding:0.2rem 0.5rem;border:1px solid rgba(201,168,76,0.3);border-radius:2px}
+.pc-title{font-size:1.05rem;font-weight:500;margin-bottom:0.5rem;letter-spacing:0.01em}
+.pc-desc{font-size:0.84rem;color:var(--muted);line-height:1.75;margin-bottom:1.2rem;font-weight:300}
+.pc-tech{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.2rem}
+.pc-badge{font-size:0.68rem;padding:0.2rem 0.55rem;background:var(--bg3);border:1px solid var(--border);border-radius:2px;color:var(--muted);letter-spacing:0.04em}
+.pc-links{display:flex;gap:1.2rem;padding-top:1rem;border-top:1px solid var(--border)}
+.pc-link{font-size:0.78rem;color:var(--muted);text-decoration:none;letter-spacing:0.05em;transition:color 0.2s}
+.pc-link:hover{color:var(--accent)}
+.add-project{background:transparent;border:1px dashed var(--border);border-radius:6px;padding:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.8rem;cursor:pointer;transition:border-color 0.3s;min-height:200px}
+.add-project:hover{border-color:rgba(201,168,76,0.3)}
+.add-icon{font-size:1.5rem;color:var(--soft)}
+.add-text{font-size:0.82rem;color:var(--soft);text-align:center;line-height:1.6}
+
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:1.8rem}
+.edu-period{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:0.8rem}
+.edu-degree{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;margin-bottom:0.3rem}
+.edu-school{font-size:0.85rem;color:var(--muted);margin-bottom:0.8rem}
+.edu-detail{font-size:0.8rem;color:var(--soft);line-height:1.6}
+.edu-badge{display:inline-block;font-size:0.68rem;padding:0.2rem 0.6rem;background:rgba(139,184,160,0.08);border:1px solid rgba(139,184,160,0.2);border-radius:2px;color:var(--accent2);margin-top:0.8rem}
+
+/* CONTACT */
+.contact-section{background:var(--bg2);border-top:1px solid var(--border);padding:6rem 3rem;text-align:center}
+.contact-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:300;margin-bottom:1rem;letter-spacing:-0.01em}
+.contact-title em{font-style:italic;color:var(--accent)}
+.contact-sub{color:var(--muted);font-size:0.9rem;line-height:1.8;max-width:420px;margin:0 auto 3rem;font-weight:300}
+.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.contact-link{display:flex;align-items:center;gap:0.6rem;padding:0.8rem 1.6rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);text-decoration:none;font-size:0.82rem;letter-spacing:0.04em;transition:border-color 0.2s,color 0.2s}
+.contact-link:hover{border-color:rgba(201,168,76,0.3);color:var(--accent)}
+.contact-link svg{width:15px;height:15px;flex-shrink:0}
+
+footer{padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border)}
+footer p{font-size:0.75rem;color:var(--soft);letter-spacing:0.05em}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  nav ul{display:none}
+  .hero{padding:5rem 1.5rem 2rem}
+  .hero-content{padding-left:1.5rem}
+  .hero-line{left:1.5rem}
+  .hero-stats{gap:2rem}
+  .section{padding:4rem 1.5rem}
+  .about-grid,.edu-grid{grid-template-columns:1fr}
+  .contact-section{padding:4rem 1.5rem}
+  footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Helen <em>Reinoso</em></div>
+  <ul>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#educacion">Educación</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:helenalairei1407@gmail.com">Disponible</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Desarrollo Web · Full Stack · Panamá 🇵🇦</div>
+    <h1>Helen <em>Reinoso</em></h1>
+    <div class="hero-subtitle">Construyo para la web</div>
+    <p class="hero-sub">Estudiante de Licenciatura en Desarrollo y Gestión de Software. Me apasiona crear aplicaciones que resuelvan problemas reales y tengan impacto positivo.</p>
+    <div class="hero-actions">
+      <a class="btn-gold" href="#proyectos">Ver proyectos</a>
+      <a class="btn-ghost" href="#contacto">Contacto</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">3<sup>er</sup></div><div class="stat-label">Año de carrera</div></div>
+      <div><div class="stat-num">1<sup>+</sup></div><div class="stat-label">Proyectos</div></div>
+      <div><div class="stat-num">∞</div><div class="stat-label">Ganas de aprender</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="section" id="sobre-mi">
+  <div class="sec-header reveal">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">Sobre mí</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="about-grid reveal">
+    <div>
+      <div class="about-text">
+        <p>Soy Helen, estudiante panameña de <strong>Licenciatura en Desarrollo y Gestión de Software</strong> en mi tercer año de carrera.</p>
+        <p>Me interesa el desarrollo web con propósito: crear cosas que tengan impacto real. Mi proyecto <strong>Manglavida</strong> nació de querer unir la tecnología con la educación ambiental de Panamá.</p>
+        <p>Estoy en etapa de crecimiento, aprendiendo constantemente y buscando mi primera oportunidad profesional para poner en práctica todo lo que he aprendido.</p>
+      </div>
+      <div class="skills-section">
+        <div class="skills-label">Tecnologías</div>
+        <div class="skills-wrap">
+          <span class="sk main">HTML / CSS</span>
+          <span class="sk main">Python</span>
+          <span class="sk main">SQL</span>
+          <span class="sk main">PostgreSQL</span>
+          <span class="sk">JavaScript</span>
+          <span class="sk">Git</span>
+          <span class="sk">GitHub</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-card">
+      <div class="about-card-title">Un poco más de mí</div>
+      <div class="about-detail">
+        <span>Ubicación</span>
+        <span>Panamá 🇵🇦</span>
+      </div>
+      <div class="about-detail">
+        <span>Estado</span>
+        <span style="color:var(--accent2)">● Disponible para trabajar</span>
+      </div>
+      <div class="about-detail">
+        <span>Carrera</span>
+        <span>Lic. Desarrollo y Gestión de Software</span>
+      </div>
+      <div class="about-detail">
+        <span>Año</span>
+        <span>3er año</span>
+      </div>
+      <div class="about-detail">
+        <span>Intereses</span>
+        <span>Web, Datos, Medio ambiente</span>
+      </div>
+      <div class="about-detail">
+        <span>Idiomas</span>
+        <span>Español · Inglés</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="section" id="proyectos">
+  <div class="sec-header reveal">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">Proyectos</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="projects-grid">
+
+    <!-- MANGLAVIDA -->
+    <div class="project-card featured reveal">
+      <div class="pc-header">
+        <span class="pc-num">001</span>
+        <span class="pc-featured-badge">✦ destacado</span>
+      </div>
+      <div class="pc-title">Manglavida</div>
+      <div class="pc-desc">Plataforma educativa sobre los manglares de Panamá. Incluye biblioteca de 12 especies de manglar con sus 3 especies de fauna asociada, información sobre cuidado y conservación, y un mapa interactivo con 16 ubicaciones de manglares en todo el país.</div>
+      <div class="pc-tech">
+        <span class="pc-badge">HTML</span>
+        <span class="pc-badge">CSS</span>
+        <span class="pc-badge">JavaScript</span>
+        <span class="pc-badge">Mapa interactivo</span>
+      </div>
+      <div class="pc-links">
+        <a class="pc-link" href="https://github.com/Helen-Reinoso" target="_blank">GitHub ↗</a>
+        <!-- Cuando subas el proyecto, agrega el link aquí: -->
+        <!-- <a class="pc-link" href="https://helen-reinoso.github.io/manglavida" target="_blank">Ver proyecto ↗</a> -->
+      </div>
+    </div>
+
+    <!-- PLACEHOLDER PROYECTOS SEMESTRES ANTERIORES -->
+    <div class="project-card reveal">
+      <div class="pc-header">
+        <span class="pc-num">002</span>
+        <span class="pc-status-wip">◐ próximamente</span>
+      </div>
+      <div class="pc-title">Proyecto de semestre</div>
+      <div class="pc-desc">Próximamente agregaré aquí mis proyectos de semestres anteriores. ¡Siempre construyendo!</div>
+      <div class="pc-tech">
+        <span class="pc-badge">Python</span>
+        <span class="pc-badge">SQL</span>
+      </div>
+      <div class="pc-links">
+        <a class="pc-link" href="https://github.com/Helen-Reinoso" target="_blank">Ver GitHub ↗</a>
+      </div>
+    </div>
+
+    <!-- AGREGAR MÁS -->
+    <div class="add-project reveal" onclick="window.open('https://github.com/Helen-Reinoso','_blank')">
+      <div class="add-icon">+</div>
+      <div class="add-text">Más proyectos<br>en mi GitHub</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCACIÓN -->
+<section class="section" id="educacion">
+  <div class="sec-header reveal">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">Educación</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <div class="edu-period">2022 — Presente</div>
+      <div class="edu-degree">Lic. en Desarrollo y Gestión de Software</div>
+      <div class="edu-school">Universidad · Panamá</div>
+      <div class="edu-detail">Tercer año. Enfocada en desarrollo web, bases de datos y gestión de proyectos de software.</div>
+      <div class="edu-badge">● En curso</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-period">Aprendizaje continuo</div>
+      <div class="edu-degree">Proyectos & Práctica</div>
+      <div class="edu-school">Proyectos académicos y personales</div>
+      <div class="edu-detail">Construyo proyectos reales para aplicar lo aprendido en clase. Manglavida es mi proyecto más completo hasta la fecha.</div>
+      <div class="edu-badge" style="border-color:rgba(201,168,76,0.2);color:var(--accent);background:rgba(201,168,76,0.05)">✦ Autodidacta</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact-section" id="contacto">
+  <h2 class="contact-title reveal">¿Trabajamos<br><em>juntos?</em></h2>
+  <p class="contact-sub reveal">Estoy buscando mi primera oportunidad profesional. Si tienes una vacante, una práctica o un proyecto, me encantaría escucharte.</p>
+  <div class="contact-links reveal">
+    <a class="contact-link" href="mailto:helenalairei1407@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      helenalairei1407@gmail.com
+    </a>
+    <a class="contact-link" href="https://linkedin.com/in/helen-reinoso" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a class="contact-link" href="https://github.com/Helen-Reinoso" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      GitHub
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Helen Reinoso · Panamá</p>
+  <p>Hecho con cuidado y café ☕</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
