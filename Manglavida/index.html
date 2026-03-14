@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manglares de Panamá - Ecosistemas Costeros Vitales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/3c/2f/d7/3c2fd7cab94532b555aaf34a7e868c70.jpg">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>ManglaVida Panamá</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#importancia">Importancia</a></li>
+                <li><a href="#educacion">Educación</a></li> 
+                <li><a href="#biblioteca">Biblioteca</a></li>
+                <li><a href="#datos">Datos</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#accion">Actúa</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Ecosistemas en Peligro</span>
+            <h1>Los Guardianes Silenciosos de Nuestras Costas</h1>
+            <p class="hero-subtitle">
+                Los manglares de Panamá protegen la biodiversidad, capturan carbono 
+                y sostienen comunidades. Descubre por qué son vitales para nuestro futuro.
+            </p>
+            <div class="hero-cta">
+                <a href="#mapa" class="btn-principal">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Explorar Mapa Interactivo
+                </a>
+                <a href="#educacion" class="btn-secundario">
+                    <i class="fas fa-book-open"></i>
+                    Aprender Más
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Descubre más</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS BANNER -->
+    <section class="stats-banner">
+        <div class="stat-item">
+            <div class="stat-number" data-target="174000">0</div>
+            <div class="stat-label">Hectáreas de Manglares</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Veces Más Carbono que Bosques</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">Especies de Manglar</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="70">0</div>
+            <div class="stat-label">% en el Pacífico</div>
+        </div>
+    </section>
+
+    <!-- IMPORTANCIA -->
+    <section class="section importancia-section" id="importancia">
+        <div class="section-header">
+            <span class="section-tag">Por Qué Importan</span>
+            <h2>Los Pilares de Nuestro Ecosistema Costero</h2>
+            <p class="section-description">
+                Los manglares son mucho más que árboles en el agua. Son ecosistemas 
+                complejos que brindan servicios ambientales invaluables.
+            </p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="feature-card" data-aos="fade-up">
+                <div class="card-icon biodiversidad">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <img src="imagenes/biodiversidad.jpg" alt="Biodiversidad en manglares">
+                <div class="card-content">
+                    <h3>Biodiversidad Excepcional</h3>
+                    <p>Hogar de más de 200 especies de aves, crustáceos y peces. Los manglares sirven como nurseries naturales donde el 75% de las especies comerciales de pescado pasan parte de su ciclo de vida.</p>
+                    <div class="card-highlight">
+                        <i class="fas fa-dove"></i>
+                        <span>Refugio de especies migratorias</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-icon proteccion">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <img src="imagenes/proteccion-costera.jpg" alt="Protección costera">
+                <div class="card-content">
+                    <h3>Protección Costera Natural</h3>
+                    <p>Las raíces entrelazadas de los manglares reducen la erosión costera hasta un 66% y pueden disminuir la altura de las olas en un 60%, protegiendo comunidades de tormentas.</p>
+                    <div class="card-highlight">
+                        <i class="fas fa-water"></i>
+                        <span>Barrera contra huracanes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-icon carbono">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <img src="imagenes/carbono-azul.jpg" alt="Carbono azul">
+                <div class="card-content">
+                    <h3>Supercaptadores de Carbono</h3>
+                    <p>Los manglares almacenan hasta 5 veces más carbono que los bosques tropicales terrestres. Un solo hectárea puede capturar hasta 25 toneladas de CO₂ al año.</p>
+                    <div class="card-highlight">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Aliados contra el cambio climático</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon comunidad">
+                    <i class="fas fa-users"></i>
+                </div>
+                <img src="imagenes/comunidades.jpg" alt="Comunidades costeras">
+                <div class="card-content">
+                    <h3>Sustento de Comunidades</h3>
+                    <p>Más de 50,000 familias panameñas dependen directamente de los recursos del manglar para pesca, turismo y recolección de moluscos.</p>
+                    <div class="card-highlight">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Economía local resiliente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANAMÁ MEGADIVERSO -->
+    <section class="megadiverso-section">
+        <div class="megadiverso-content">
+            <div class="megadiverso-image">
+                <img src="imagenes/panama-megadiverso.jpg" alt="Panamá megadiverso">
+                <div class="image-badge">
+                    <i class="fas fa-star"></i>
+                    País Megadiverso
+                </div>
+            </div>
+            <div class="megadiverso-text">
+                <span class="section-tag">Puente Biológico</span>
+                <h2>Panamá: Donde Convergen Dos Océanos</h2>
+                <p>
+                    Panamá es uno de los 17 países megadiversos del mundo. Su ubicación 
+                    estratégica como puente entre Norte y Sudamérica ha creado un corredor 
+                    biológico único donde los manglares prosperan en ambas costas.
+                </p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Pacífico</strong>
+                            <span>~122,000 hectáreas</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Caribe</strong>
+                            <span>~52,000 hectáreas</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-tree"></i>
+                        <div>
+                            <strong>Especies</strong>
+                            <span>Mangle rojo, negro, blanco y botoncillo</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <strong>Áreas Protegidas</strong>
+                            <span>Humedales de importancia internacional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCACIÓN -->
+    <section class="section educacion-section" id="educacion">
+        <div class="section-header">
+            <span class="section-tag">Aprende</span>
+            <h2>¿Cómo Funcionan Los Manglares?</h2>
+        </div>
+
+        <div class="educacion-grid">
+            <div class="edu-card">
+                <div class="edu-number">01</div>
+                <h3><i class="fas fa-seedling"></i> Adaptaciones Únicas</h3>
+                <p>Los manglares pueden filtrar hasta 90% de la sal del agua marina a través de sus raíces. Algunas especies excretan el exceso de sal por sus hojas.</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-number">02</div>
+                <h3><i class="fas fa-anchor"></i> Raíces Especializadas</h3>
+                <p>Las raíces aéreas (neumatóforos) permiten que el árbol respire en suelos anegados. Las raíces zancudas proporcionan estabilidad en suelos blandos.</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-number">03</div>
+                <h3><i class="fas fa-baby"></i> Reproducción Vivípara</h3>
+                <p>Las semillas germinan mientras aún están en el árbol madre, creando un propágulo que cae y se clava en el lodo para crecer.</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-number">04</div>
+                <h3><i class="fas fa-recycle"></i> Ciclo de Nutrientes</h3>
+                <p>Las hojas caídas se descomponen y alimentan una red trófica compleja que sostiene ecosistemas marinos y terrestres.</p>
+            </div>
+        </div>
+
+        <!-- TIPOS DE MANGLAR -->
+        <div class="tipos-manglar">
+            <h3>Las 4 Especies de Manglar Mas Comunes en Panamá</h3>
+            <div class="tipos-grid">
+                <div class="tipo-card rojo">
+                    <div class="tipo-header">
+                        <i class="fas fa-tree"></i>
+                        <h4>Mangle Rojo</h4>
+                    </div>
+                    <p><em>Rhizophora mangle</em></p>
+                    <ul>
+                        <li>Raíces aéreas (zancudas) características</li>
+                        <li>Primera línea de defensa costera</li>
+                        <li>Tolerancia extrema a la salinidad</li>
+                    </ul>
+                </div>
+                <div class="tipo-card negro">
+                    <div class="tipo-header">
+                        <i class="fas fa-tree"></i>
+                        <h4>Mangle Negro</h4>
+                    </div>
+                    <p><em>Avicennia germinans</em></p>
+                    <ul>
+                        <li>Neumatóforos (raíces que sobresalen)</li>
+                        <li>Excreta sal por sus hojas</li>
+                        <li>Común en zonas intermareales</li>
+                    </ul>
+                </div>
+                <div class="tipo-card blanco">
+                    <div class="tipo-header">
+                        <i class="fas fa-tree"></i>
+                        <h4>Mangle Blanco</h4>
+                    </div>
+                    <p><em>Laguncularia racemosa</em></p>
+                    <ul>
+                        <li>Hojas con glándulas de sal</li>
+                        <li>Crece en zonas más altas</li>
+                        <li>Flores blancas aromáticas</li>
+                    </ul>
+                </div>
+                <div class="tipo-card boton">
+                    <div class="tipo-header">
+                        <i class="fas fa-tree"></i>
+                        <h4>Mangle Botoncillo</h4>
+                    </div>
+                    <p><em>Conocarpus erectus</em></p>
+                    <ul>
+                        <li>Límite entre manglar y tierra firme</li>
+                        <li>Menor tolerancia a la sal</li>
+                        <li>Frutos en forma de piña</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!--Biblioteca-->
+ <section class="section biblioteca-section" id="biblioteca">
+        <div class="section-header">
+            <span class="section-tag">Biblioteca de Especies</span>
+            <h2>Especies de Manglar en Panamá</h2>
+            <p class="section-description">
+                Panamá alberga una rica diversidad de especies de mangle en ambas costas. 
+                Descubre cada especie y la fauna que depende de ellas.
+            </p>
+        </div>
+
+        <div class="biblioteca-filtros">
+            <button class="filtro-btn active" data-filtro="all">Todas</button>
+            <button class="filtro-btn" data-filtro="pacifico">Pacífico</button>
+            <button class="filtro-btn" data-filtro="caribe">Caribe</button>
+            <button class="filtro-btn" data-filtro="ambos">Ambas costas</button>
+        </div>
+
+        <div class="biblioteca-grid" id="bibliotecaGrid">
+
+            <!-- 1. Rhizophora mangle -->
+            <div class="especie-card" data-costa="ambos">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Rhizophora_mangle_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-262.jpg/250px-Rhizophora_mangle_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-262.jpg" alt="Mangle Rojo" class="especie-img" onerror="this.src='imagenes/manglerojo.jpg'">
+                    <div class="especie-costa-badge ambos">Ambas costas</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Mangle Rojo</h3>
+                        <em>Rhizophora mangle</em>
+                    </div>
+                    <p class="especie-desc">El más icónico de los manglares, reconocible por sus llamativas raíces aéreas en arco (raíces zancudas) que se adentran en el agua. Forma la primera línea de defensa costera y crea un laberinto protector para la vida marina. Su madera rojiza y corteza rica en taninos ha sido usada históricamente en curtiembre.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pelecanus_occidentalis_-_Punta_Arenas%2C_Costa_Rica_-8_%28cropped%29.jpg/320px-Pelecanus_occidentalis_-_Punta_Arenas%2C_Costa_Rica_-8_%28cropped%29.jpg" data-nombre="Pelícano Pardo">
+                                <i class="fas fa-feather-alt"></i> Pelícano Pardo
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Buch%C3%B3n_%28Pel%C3%ADcano%29_en_Zool%C3%B3gico_de_Paraguan%C3%A1.jpg/1280px-Buch%C3%B3n_%28Pel%C3%ADcano%29_en_Zool%C3%B3gico_de_Paraguan%C3%A1.jpg?20250304020924" alt="Pelícano Pardo">
+                                    <span>Pelícano Pardo</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Callinectes_sapidus_2.jpg/320px-Callinectes_sapidus_2.jpg" data-nombre="Cangrejo Azul">
+                                <i class="fas fa-spider"></i> Cangrejo Azul
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blue_crab_%28black_background%29.jpg/640px-Blue_crab_%28black_background%29.jpg" alt="Cangrejo Azul">
+                                    <span>Cangrejo Azul</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Caiman_crocodilus_paname.jpg/320px-Caiman_crocodilus_paname.jpg" data-nombre="Caimán">
+                                <i class="fas fa-dragon"></i> Caimán
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Spectacled_caiman_in_Costa_Rica_02.jpg/640px-Spectacled_caiman_in_Costa_Rica_02.jpg" alt="Caimán">
+                                    <span>Caimán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Avicennia germinans -->
+            <div class="especie-card" data-costa="ambos">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Avicennia_germinans_Black_Mangrove.jpg/320px-Avicennia_germinans_Black_Mangrove.jpg" alt="Mangle Negro" class="especie-img" onerror="this.src='imagenes/manglenegro.jpg'">
+                    <div class="especie-costa-badge ambos">Ambas costas</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Mangle Negro</h3>
+                        <em>Avicennia germinans</em>
+                    </div>
+                    <p class="especie-desc">Especialista en suelos con alta salinidad, el mangle negro posee neumatóforos —pequeñas raíces que sobresalen verticalmente del suelo— que le permiten respirar en suelos anegados. Sus hojas excretar sal visible como cristales blancos. Es tolerante a temperaturas extremas y altamente resiliente.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Egretta_tricolor.jpg/320px-Egretta_tricolor.jpg" data-nombre="Garza Tricolor">
+                                <i class="fas fa-feather-alt"></i> Garza Tricolor
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Tricolored_Heron_Wading.jpg?20120927233717" alt="Garza Tricolor">
+                                    <span>Garza Tricolor</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Uca_pugnax.jpg/320px-Uca_pugnax.jpg" data-nombre="Cangrejo Violinista">
+                                <i class="fas fa-spider"></i> Cangrejo Violinista
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fiddler_crab.jpg/640px-Fiddler_crab.jpg" alt="Cangrejo Violinista">
+                                    <span>Cangrejo Violinista</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Lutjanus_griseus_1.jpg/320px-Lutjanus_griseus_1.jpg" data-nombre="Pargo Gris">
+                                <i class="fas fa-fish"></i> Pargo Gris
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Haemulon_sexfasciatum.jpg/640px-Haemulon_sexfasciatum.jpg" alt="Pargo Gris">
+                                    <span>Pargo Gris</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Laguncularia racemosa -->
+            <div class="especie-card" data-costa="ambos">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Laguncularia_racemosa_2.jpg/320px-Laguncularia_racemosa_2.jpg" alt="Mangle Blanco" class="especie-img" onerror="this.src='imagenes/mangleblanco.jpg'">
+                    <div class="especie-costa-badge ambos">Ambas costas</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Mangle Blanco</h3>
+                        <em>Laguncularia racemosa</em>
+                    </div>
+                    <p class="especie-desc">El mangle blanco crece en zonas de transición, tierra adentro del manglar rojo y negro. Sus hojas tienen glándulas especiales que secretan sal en su base. Produce pequeñas flores blancas aromáticas que son importantes fuente de néctar. Su madera es densa y resistente, usada por comunidades costeras.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Chloroceryle_amazona.jpg/320px-Chloroceryle_amazona.jpg" data-nombre="Martín Pescador">
+                                <i class="fas fa-feather-alt"></i> Martín Pescador
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Martin_pescador_chico_%28Chloroceryle_americana%29_macho%2C_Uruguay%2C_2016.jpg/640px-Martin_pescador_chico_%28Chloroceryle_americana%29_macho%2C_Uruguay%2C_2016.jpg" alt="Martín Pescador">
+                                    <span>Martín Pescador</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Apis_mellifera_Western_honey_bee.jpg/320px-Apis_mellifera_Western_honey_bee.jpg" data-nombre="Abejas Silvestres">
+                                <i class="fas fa-bug"></i> Abejas Silvestres
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Apis_mellifera_-_Brassica_napus_-_Valingu.jpg/640px-Apis_mellifera_-_Brassica_napus_-_Valingu.jpg" alt="Abejas Silvestres">
+                                    <span>Abejas Silvestres</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Mugil_curema_white_mullet.jpg/320px-Mugil_curema_white_mullet.jpg" data-nombre="Lisa Blanca">
+                                <i class="fas fa-fish"></i> Lisa Blanca
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/White_mullet_%28Mugil_curema%29.jpg/640px-White_mullet_%28Mugil_curema%29.jpg" alt="Lisa Blanca">
+                                    <span>Lisa Blanca</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Conocarpus erectus -->
+            <div class="especie-card" data-costa="ambos">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Conocarpus_erectus.jpg/320px-Conocarpus_erectus.jpg" alt="Mangle Botoncillo" class="especie-img" onerror="this.src='imagenes/manglebotoncillo.jpg'">
+                    <div class="especie-costa-badge ambos">Ambas costas</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Mangle Botoncillo</h3>
+                        <em>Conocarpus erectus</em>
+                    </div>
+                    <p class="especie-desc">El botoncillo marca el límite entre el manglar y la tierra firme, funcionando como zona de amortiguamiento. Sus frutos pequeños en forma de piña o botón dan nombre a la especie. Aunque con menor tolerancia a la salinidad que otros mangles, es extremadamente resistente al calor y la sequía. Es hábitat de numerosas aves terrestres.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Iguana_iguana_Panama.jpg/320px-Iguana_iguana_Panama.jpg" data-nombre="Iguana Verde">
+                                <i class="fas fa-dragon"></i> Iguana Verde
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Iguana_iguana_Portoviejo_01.jpg/640px-Iguana_iguana_Portoviejo_01.jpg" alt="Iguana Verde">
+                                    <span>Iguana Verde</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ringed_Kingfisher.jpg/320px-Ringed_Kingfisher.jpg" data-nombre="Martín Gigante">
+                                <i class="fas fa-feather-alt"></i> Martín Gigante
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Giant_Kingfisher-002.jpg/640px-Giant_Kingfisher-002.jpg" alt="Martín Gigante">
+                                    <span>Martín Gigante</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Orange-chinned_parakeet.jpg/320px-Orange-chinned_parakeet.jpg" data-nombre="Perico Barbinaranja">
+                                <i class="fas fa-feather-alt"></i> Perico Barbinaranja
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Brotogeris_jugularis.jpg/640px-Brotogeris_jugularis.jpg" alt="Perico Barbinaranja">
+                                    <span>Perico Barbinaranja</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Rhizophora harrisonii -->
+            <div class="especie-card" data-costa="pacifico">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Rhizophora_mangle_in_Monterey_Bay_Aquarium.JPG/320px-Rhizophora_mangle_in_Monterey_Bay_Aquarium.JPG" alt="Mangle de Harrison" class="especie-img" onerror="this.src='imagenes/mangleharrison.jpg'">
+                    <div class="especie-costa-badge pacifico">Pacífico</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Mangle de Harrison</h3>
+                        <em>Rhizophora harrisonii</em>
+                    </div>
+                    <p class="especie-desc">Especie híbrida exclusiva del Pacífico americano, resultado del cruce entre R. mangle y R. racemosa. Posee raíces aéreas más robustas que el mangle rojo común y puede alcanzar alturas superiores a 30 metros en las zonas estuarinas del Pacífico panameño. Es especialmente abundante en el Golfo de Montijo y Darién.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Crocodylus_acutus%2C_2009.jpg/320px-Crocodylus_acutus%2C_2009.jpg" data-nombre="Cocodrilo Americano">
+                                <i class="fas fa-dragon"></i> Cocodrilo Americano
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/American_crocodile_-_Cocodrilo_americano_%28Crocodylus_acutus%29.jpg/640px-American_crocodile_-_Cocodrilo_americano_%28Crocodylus_acutus%29.jpg" alt="Cocodrilo Americano">
+                                    <span>Cocodrilo Americano</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Frigate_magnificent_fg01.jpg/320px-Frigate_magnificent_fg01.jpg" data-nombre="Fragata Magnífica">
+                                <i class="fas fa-feather-alt"></i> Fragata Magnífica
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Magnificent_frigatebird_%28Fregata_magnificens_rothschildi%29_female_with_open_wings.jpg/640px-Magnificent_frigatebird_%28Fregata_magnificens_rothschildi%29_female_with_open_wings.jpg" alt="Fragata Magnífica">
+                                    <span>Fragata Magnífica</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Litopenaeus_vannamei.jpg/320px-Litopenaeus_vannamei.jpg" data-nombre="Camarón Blanco">
+                                <i class="fas fa-fish"></i> Camarón Blanco
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Penaeus_vannamei_01.jpg/640px-Penaeus_vannamei_01.jpg" alt="Camarón Blanco">
+                                    <span>Camarón Blanco</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Rhizophora racemosa -->
+            <div class="especie-card" data-costa="pacifico">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Mangue_et_p%C3%AAcheur_1.jpg/320px-Mangue_et_p%C3%AAcheur_1.jpg" alt="Mangle Grande" class="especie-img" onerror="this.src='imagenes/manglegrande.jpg'">
+                    <div class="especie-costa-badge pacifico">Pacífico</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Mangle Grande</h3>
+                        <em>Rhizophora racemosa</em>
+                    </div>
+                    <p class="especie-desc">La especie de mayor porte del género Rhizophora en el Pacífico, pudiendo alcanzar hasta 40 metros de altura en condiciones óptimas. Sus frutos son los más largos de los mangles del Pacífico panameño. Forma extensas masas boscosas en los grandes estuarios del Pacífico y es vital para la pesca artesanal de la región.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Heron_great_blue.jpg/320px-Heron_great_blue.jpg" data-nombre="Garza Azul Mayor">
+                                <i class="fas fa-feather-alt"></i> Garza Azul Mayor
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Little_Blue_Fly-By.png/640px-Little_Blue_Fly-By.png" alt="Garza Azul Mayor">
+                                    <span>Garza Azul Mayor</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Snook.jpg/320px-Snook.jpg" data-nombre="Róbalo">
+                                <i class="fas fa-fish"></i> Róbalo
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Centropomus_undecimalis1.jpg/640px-Centropomus_undecimalis1.jpg" alt="Róbalo">
+                                    <span>Róbalo</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Alouatta_palliata-_Howler_monkey.jpg/320px-Alouatta_palliata-_Howler_monkey.jpg" data-nombre="Mono Aullador">
+                                <i class="fas fa-paw"></i> Mono Aullador
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Ecuadorian_mantled_howler_%28Alouatta_palliata_aequatorialis%29.jpg/640px-Ecuadorian_mantled_howler_%28Alouatta_palliata_aequatorialis%29.jpg" alt="Mono Aullador">
+                                    <span>Mono Aullador</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Avicennia bicolor -->
+            <div class="especie-card" data-costa="pacifico">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Avicennia_marina_-_Mangrove.jpg/320px-Avicennia_marina_-_Mangrove.jpg" alt="Mangle Palo de sal" class="especie-img" onerror="this.src='imagenes/palodesal.jpg'">
+                    <div class="especie-costa-badge pacifico">Pacífico</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Palo de Sal</h3>
+                        <em>Avicennia bicolor</em>
+                    </div>
+                    <p class="especie-desc">Especie endémica del Pacífico centroamericano, el palo de sal es notable por sus hojas bicolores: verde brillante por el haz y plateado-grisáceo por el envés. Habita en las zonas más hipersalinas del manglar, donde pocas plantas pueden sobrevivir. Sus neumatóforos forman densas alfombras alrededor del árbol madre.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Roseate_spoonbill_%28Platalea_ajaja%29.jpg/320px-Roseate_spoonbill_%28Platalea_ajaja%29.jpg" data-nombre="Espátula Rosada">
+                                <i class="fas fa-feather-alt"></i> Espátula Rosada
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/2019-02-15_074_Roseate_spoonbill_%28Platalea_ajaja%29_at_Sian_Ka%27an_Biosphere_Reserve%2C_Mexico.jpg/640px-2019-02-15_074_Roseate_spoonbill_%28Platalea_ajaja%29_at_Sian_Ka%27an_Biosphere_Reserve%2C_Mexico.jpg" alt="Espátula Rosada">
+                                    <span>Espátula Rosada</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ucides_occidentalis.jpg/320px-Ucides_occidentalis.jpg" data-nombre="Cangrejo Azul del Pacífico">
+                                <i class="fas fa-spider"></i> Cangrejo Azul
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blue_crab_%28black_background%29.jpg/640px-Blue_crab_%28black_background%29.jpg" alt="Cangrejo Azul del Pacífico">
+                                    <span>Cangrejo Azul del Pacífico</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Arius_seemanni01.jpg/320px-Arius_seemanni01.jpg" data-nombre="Bagre Marino">
+                                <i class="fas fa-fish"></i> Bagre Marino
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Bagre_%28Genidens_genidens%29.jpg/640px-Bagre_%28Genidens_genidens%29.jpg" alt="Bagre Marino">
+                                    <span>Bagre Marino</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Pelliciera rhizophorae -->
+            <div class="especie-card" data-costa="ambos">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Pelliciera_rhizophorae.jpg/320px-Pelliciera_rhizophorae.jpg" alt="Palo de Rosa" class="especie-img" onerror="this.src='imagenes/paloderosa.jpg'">
+                    <div class="especie-costa-badge ambos">Ambas costas</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Palo de Rosa</h3>
+                        <em>Pelliciera rhizophorae</em>
+                    </div>
+                    <p class="especie-desc">Especie única en su género, el palo de rosa es el mangle más raro de Panamá y está clasificado como vulnerable a nivel global. Sus grandes flores rosas o blancas son inconfundibles. Posee raíces tabulares en forma de aletones y está restringido a pocas localidades en ambas costas de Panamá. Su conservación es prioritaria.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tapir_de_montagne.jpg/320px-Tapir_de_montagne.jpg" data-nombre="Manatí del Caribe">
+                                <i class="fas fa-hippo"></i> Manatí
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Manatee_photo.jpg/640px-Manatee_photo.jpg" alt="Manatí">
+                                    <span>Manatí del Caribe</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Anhinga_anhinga_-_01.jpg/320px-Anhinga_anhinga_-_01.jpg" data-nombre="Anhinga">
+                                <i class="fas fa-feather-alt"></i> Anhinga
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Anhinga.jpg/640px-Anhinga.jpg" alt="Anhinga">
+                                    <span>Anhinga</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tarpon_atlanticus.jpg/320px-Tarpon_atlanticus.jpg" data-nombre="Tarpón Atlántico">
+                                <i class="fas fa-fish"></i> Tarpón
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Megalops_atlanticus_by_DaijuAzuma.jpg/640px-Megalops_atlanticus_by_DaijuAzuma.jpg" alt="Tarpón">
+                                    <span>Tarpón Atlántico</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Mora oleifera -->
+            <div class="especie-card" data-costa="pacifico">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mora_oleifera.jpg/320px-Mora_oleifera.jpg" alt="Nato" class="especie-img" onerror="this.src='imagenes/nato.jpg'">
+                    <div class="especie-costa-badge pacifico">Pacífico</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Nato</h3>
+                        <em>Mora oleifera</em>
+                    </div>
+                    <p class="especie-desc">Árbol majestuoso que puede alcanzar los 50 metros, considerado uno de los árboles más grandes del bosque de manglar en Panamá. Su semilla enorme, de hasta 10 cm, es una de las mayores en su familia. La madera del nato es extremadamente dura y durable, siendo históricamente muy valorada para construcción naval. Crece en los márgenes del manglar hacia tierra firme.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Alouatta_palliata-_Howler_monkey.jpg/320px-Alouatta_palliata-_Howler_monkey.jpg" data-nombre="Mono Aullador">
+                                <i class="fas fa-paw"></i> Mono Aullador
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Ecuadorian_mantled_howler_%28Alouatta_palliata_aequatorialis%29.jpg/640px-Ecuadorian_mantled_howler_%28Alouatta_palliata_aequatorialis%29.jpg" alt="Mono Aullador">
+                                    <span>Mono Aullador</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Harpia_harpyja_-_Buffalo_Zoo.jpg/320px-Harpia_harpyja_-_Buffalo_Zoo.jpg" data-nombre="Águila Harpía">
+                                <i class="fas fa-feather-alt"></i> Águila Harpía
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Harpia_harpyja_-_Harpy_Eagle._%2841760126880%29.jpg/640px-Harpia_harpyja_-_Harpy_Eagle._%2841760126880%29.jpg" alt="Águila Harpía">
+                                    <span>Águila Harpía</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tayassu_pecari.jpg/320px-Tayassu_pecari.jpg" data-nombre="Puerco de Monte">
+                                <i class="fas fa-paw"></i> Puerco de Monte
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Collared_Peccary_%28Pecari_tajacu%29_male_%2828482046922%29.jpg/640px-Collared_Peccary_%28Pecari_tajacu%29_male_%2828482046922%29.jpg" alt="Puerco de Monte">
+                                    <span>Puerco de Monte</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Acrostichum aureum -->
+            <div class="especie-card" data-costa="ambos">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Acrostichum_aureum_20090906_001.jpg/320px-Acrostichum_aureum_20090906_001.jpg" alt="Helecho de Manglar" class="especie-img" onerror="this.src='imagenes/helechodemanglar.jpg'">
+                    <div class="especie-costa-badge ambos">Ambas costas</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Helecho de Manglar</h3>
+                        <em>Acrostichum aureum</em>
+                    </div>
+                    <p class="especie-desc">Aunque no es un árbol, este helecho gigante es una planta característica del ecosistema de manglar, formando densas colonias en los claros y orillas. Sus frondas pueden alcanzar los 3 metros de altura. Es una de las plantas vasculares más tolerantes a la salinidad. Las esporas doradas en el envés de sus frondas le dan su nombre específico.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Iguana_iguana_%28Mannheim%29_2015-03-08_15-04-07.jpg/320px-Iguana_iguana_%28Mannheim%29_2015-03-08_15-04-07.jpg" data-nombre="Iguana Verde">
+                                <i class="fas fa-dragon"></i> Iguana Verde
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Iguana_iguana_Portoviejo_01.jpg/640px-Iguana_iguana_Portoviejo_01.jpg" alt="Iguana Verde">
+                                    <span>Iguana Verde</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Morpho_peleides_limpida.jpg/320px-Morpho_peleides_limpida.jpg" data-nombre="Mariposa Morpho">
+                                <i class="fas fa-bug"></i> Mariposa Morpho
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Mariposa_Morpho_2.jpg/640px-Mariposa_Morpho_2.jpg" alt="Mariposa Morpho">
+                                    <span>Mariposa Morpho</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Grypheryx_fluviatilis_-_painted_terrapin_-_01.jpg/320px-Grypheryx_fluviatilis_-_painted_terrapin_-_01.jpg" data-nombre="Tortuga de Manglar">
+                                <i class="fas fa-shield-alt"></i> Tortuga de Manglar
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Meso-American_slider_%28Trachemys_venusta_venusta%29_Cayo.jpg/640px-Meso-American_slider_%28Trachemys_venusta_venusta%29_Cayo.jpg" alt="Tortuga de Manglar">
+                                    <span>Tortuga de Manglar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Pterocarpus officinalis -->
+            <div class="especie-card" data-costa="caribe">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Pterocarpus_officinalis.jpg/320px-Pterocarpus_officinalis.jpg" alt="Sangre de Drago" class="especie-img" onerror="this.src='imagenes/sangrededrago.jpg'">
+                    <div class="especie-costa-badge caribe">Caribe</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Sangre de Drago</h3>
+                        <em>Pterocarpus officinalis</em>
+                    </div>
+                    <p class="especie-desc">Árbol imponente del Caribe panameño, reconocible por su savia de color rojo sangre que supura cuando se corta la corteza —de ahí su nombre popular. Forma extensos bosques pantanosos en Bocas del Toro y el Darién caribeño. Sus raíces tabulares crean una arquitectura subterránea compleja que protege la costa del Caribe.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Manatee_with_calf.jpg/320px-Manatee_with_calf.jpg" data-nombre="Manatí">
+                                <i class="fas fa-hippo"></i> Manatí
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Manatee_photo.jpg/640px-Manatee_photo.jpg" alt="Manatí">
+                                    <span>Manatí del Caribe</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tapirus_bairdii.jpg/320px-Tapirus_bairdii.jpg" data-nombre="Danta">
+                                <i class="fas fa-paw"></i> Danta
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Baird%27s_tapir_mother_with_baby_%2892151%29.jpg/640px-Baird%27s_tapir_mother_with_baby_%2892151%29.jpg" alt="Danta">
+                                    <span>Danta de Baird</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Caiman_crocodilus_22.jpg/320px-Caiman_crocodilus_22.jpg" data-nombre="Babilla">
+                                <i class="fas fa-dragon"></i> Babilla
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Caiman_crocodilus._Spectacled_Caiman_%2828288541767%29.jpg/640px-Caiman_crocodilus._Spectacled_Caiman_%2828288541767%29.jpg" alt="Babilla">
+                                    <span>Babilla</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Mora megistosperma -->
+            <div class="especie-card" data-costa="pacifico">
+                <div class="especie-imagen-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Mangrove_Swamp.jpg/320px-Mangrove_Swamp.jpg" alt="Guabito de Mangle" class="especie-img" onerror="this.src='imagenes/guabitodemangle.jpg'">
+                    <div class="especie-costa-badge pacifico">Pacífico</div>
+                </div>
+                <div class="especie-info">
+                    <div class="especie-header">
+                        <h3>Guabito de Mangle</h3>
+                        <em>Mora megistosperma</em>
+                    </div>
+                    <p class="especie-desc">Árbol tropical que bordea los manglares en el Pacífico panameño, especialmente en el Darién. Posee las semillas más grandes de los bosques costeros de Panamá, que pueden pesar hasta 1 kg. Forma un dosel alto sobre otros manglares, creando zonas de sombra que favorecen a ciertas especies animales. Su madera dura ha sido explotada históricamente, haciéndolo escaso en algunas zonas.</p>
+                    <div class="especie-animales">
+                        <h4><i class="fas fa-paw"></i> Fauna asociada</h4>
+                        <div class="animales-lista">
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nasua_narica.jpg/320px-Nasua_narica.jpg" data-nombre="Coatí">
+                                <i class="fas fa-paw"></i> Coatí
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/White-nosed_coati_%28Nasua_narica%29_Peten.jpg/640px-White-nosed_coati_%28Nasua_narica%29_Peten.jpg" alt="Coatí">
+                                    <span>Coatí (Pizote)</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Chelonia_mydas_is_going_for_swim.jpg/320px-Chelonia_mydas_is_going_for_swim.jpg" data-nombre="Tortuga Verde">
+                                <i class="fas fa-shield-alt"></i> Tortuga Verde
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Total_internal_reflection_of_Chelonia_mydas.jpg/640px-Total_internal_reflection_of_Chelonia_mydas.jpg" alt="Tortuga Verde">
+                                    <span>Tortuga Verde</span>
+                                </div>
+                            </div>
+                            <div class="animal-chip" data-img="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/320px-Camponotus_flavomarginatus_ant.jpg" data-nombre="Hormiga Gigante">
+                                <i class="fas fa-bug"></i> Hormiga Bala
+                                <div class="animal-tooltip">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/320px-Camponotus_flavomarginatus_ant.jpg" alt="Hormiga Bala">
+                                    <span>Hormiga Bala</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+        <!-- SABÍAS QUE -->
+        <div class="sabias-que">
+            <h3><i class="fas fa-lightbulb"></i> ¿Sabías Que...?</h3>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <span class="fact-icon">🦀</span>
+                    <p>Los cangrejos violinistas pueden construir hasta 100 madrigueras por metro cuadrado en los manglares</p>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-icon">🌊</span>
+                    <p>Un solo manglar puede filtrar más de 1,000 litros de agua salada al día</p>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-icon">⏱️</span>
+                    <p>Los manglares pueden tardar hasta 20 años en alcanzar su madurez completa</p>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-icon">🌍</span>
+                    <p>Panamá alberga aproximadamente el 1% de los manglares del mundo</p>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-icon">💰</span>
+                    <p>Los servicios ecosistémicos de los manglares valen más de $194,000 por hectárea</p>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-icon">🐟</span>
+                    <p>El 80% del pescado que consumimos depende de los manglares en alguna etapa de su vida</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GLOSARIO -->
+        <div class="glosario">
+            <h3><i class="fas fa-book"></i> Glosario de Términos</h3>
+            <div class="glosario-grid">
+                <div class="termino">
+                    <strong>Carbono Azul:</strong>
+                    <p>Carbono capturado y almacenado por ecosistemas marinos y costeros como manglares, pastos marinos y marismas. Los manglares almacenan hasta 5 veces más carbono que los bosques tropicales terrestres.</p>
+                </div>
+                <div class="termino">
+                    <strong>Carbono Orgánico del Suelo:</strong>
+                    <p>Principal reserva de carbono en los manglares. Se acumula en los sedimentos durante miles de años. Su liberación al destruirse un manglar contribuye significativamente al cambio climático.</p>
+                </div>
+                <div class="termino">
+                    <strong>Neumatóforos:</strong>
+                    <p>Raíces especializadas que emergen verticalmente del suelo para permitir el intercambio de gases en ambientes anegados y con poco oxígeno. Son característicos del mangle negro.</p>
+                </div>
+                <div class="termino">
+                    <strong>Propágulo:</strong>
+                    <p>Semilla ya germinada del manglar que cae del árbol madre y puede flotar durante semanas hasta encontrar un lugar adecuado para enraizarse. Es resultado de la viviparidad.</p>
+                </div>
+                <div class="termino">
+                    <strong>Zona Intermareal:</strong>
+                    <p>Área costera que queda expuesta durante la marea baja y sumergida durante la marea alta. Los manglares habitan esta zona de transición entre el mar y la tierra.</p>
+                </div>
+                <div class="termino">
+                    <strong>Vivíparo:</strong>
+                    <p>Característica única de los manglares donde las semillas germinan mientras aún están unidas al árbol madre, dando lugar a los propágulos. Les permite sobrevivir en suelos salinos e inestables.</p>
+                </div>
+                <div class="termino">
+                    <strong>Zona de Crianza (Nursery):</strong>
+                    <p>Área donde juveniles de peces, camarones y crustáceos encuentran refugio entre las raíces del manglar y alimento abundante. El 75% de las especies comerciales de pesca dependen de estas zonas.</p>
+                </div>
+                <div class="termino">
+                    <strong>Halófita:</strong>
+                    <p>Planta adaptada para crecer en suelos con alta concentración de sal. Los árboles de manglar son halófitas que han desarrollado mecanismos especiales para filtrar o excretar la sal del agua de mar.</p>
+                </div>
+                <div class="termino">
+                    <strong>Sitio Ramsar:</strong>
+                    <p>Humedal reconocido por la Convención de Ramsar (1971) como de importancia internacional. Panamá cuenta con 6 sitios Ramsar, varios de ellos son áreas de manglar como el Golfo de Montijo y la Bahía de Panamá.</p>
+                </div>
+                <div class="termino">
+                    <strong>Servicios Ecosistémicos:</strong>
+                    <p>Beneficios que un ecosistema proporciona a los seres humanos. En el caso del manglar incluyen: protección costera, regulación del clima, provisión de alimentos, filtración del agua y turismo ecológico.</p>
+                </div>
+                <div class="termino">
+                    <strong>Sedimentación:</strong>
+                    <p>Proceso por el cual las raíces del manglar atrapan partículas en suspensión, estabilizando el suelo costero, reduciendo la turbidez del agua y construyendo tierra firme con el tiempo.</p>
+                </div>
+                <div class="termino">
+                    <strong>Bioacumulación:</strong>
+                    <p>Acumulación progresiva de contaminantes como metales pesados o plásticos en los tejidos de organismos vivos. En los manglares afecta a toda la cadena alimenticia, desde los moluscos hasta las aves y peces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATOS Y ESTADÍSTICAS -->
+    <section class="section datos-section" id="datos">
+        <div class="section-header">
+            <span class="section-tag">Datos</span>
+            <h2>Manglares de Panamá en Números</h2>
+        </div>
+
+        <div class="datos-container">
+            <!-- COMPARACIÓN -->
+            <div class="comparacion-card">
+                <h3>Panamá vs. Región Centroamericana</h3>
+                <div class="chart-container">
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <div class="bar-label">Panamá</div>
+                            <div class="bar-wrapper">
+                                <div class="bar" style="width: 85%"></div>
+                            </div>
+                            <span class="bar-value">174,000 ha</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Honduras</div>
+                            <div class="bar-wrapper">
+                                <div class="bar" style="width: 45%"></div>
+                            </div>
+                            <span class="bar-value">~90,000 ha</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Nicaragua</div>
+                            <div class="bar-wrapper">
+                                <div class="bar" style="width: 40%"></div>
+                            </div>
+                            <span class="bar-value">~80,000 ha</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Costa Rica</div>
+                            <div class="bar-wrapper">
+                                <div class="bar" style="width: 22%"></div>
+                            </div>
+                            <span class="bar-value">~60,000 ha</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="chart-note">Panamá posee la mayor extensión de manglares en Centroamérica</p>
+            </div>
+
+            <!-- DISTRIBUCIÓN -->
+            <div class="distribucion-card">
+                <h3>Distribución por Región</h3>
+                <div class="pie-stats">
+                    <div class="pie-item pacifico">
+                        <div class="pie-visual">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="circle" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <text x="18" y="20.35" class="percentage">70%</text>
+                            </svg>
+                        </div>
+                        <div class="pie-label">
+                            <strong>Pacífico</strong>
+                            <span>~122,000 ha</span>
+                        </div>
+                    </div>
+                    <div class="pie-item caribe">
+                        <div class="pie-visual">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <text x="18" y="20.35" class="percentage">30%</text>
+                            </svg>
+                        </div>
+                        <div class="pie-label">
+                            <strong>Caribe</strong>
+                            <span>~52,000 ha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ESTADO DE CONSERVACIÓN -->
+            <div class="conservacion-card">
+                <h3>Estado de Conservación</h3>
+                <div class="status-grid">
+                    <div class="status-item protegido">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="status-info">
+                            <strong>Protegidos</strong>
+                            <span>~35% en áreas protegidas</span>
+                        </div>
+                    </div>
+                    <div class="status-item amenaza">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div class="status-info">
+                            <strong>Bajo Amenaza</strong>
+                            <span>~25% en riesgo por desarrollo</span>
+                        </div>
+                    </div>
+                    <div class="status-item perdida">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="status-info">
+                            <strong>Pérdida Anual</strong>
+                            <span>0.5-1% por año (últimas décadas)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AMENAZAS -->
+            <div class="amenazas-card">
+                <h3><i class="fas fa-exclamation-circle"></i> Principales Amenazas</h3>
+                <div class="amenazas-list">
+                    <div class="amenaza-item">
+                        <div class="amenaza-icon desarrollo">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="amenaza-content">
+                            <h4>Desarrollo Urbano</h4>
+                            <p>Expansión de ciudades costeras y proyectos turísticos</p>
+                            <div class="impact-bar">
+                                <div class="impact-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amenaza-item">
+                        <div class="amenaza-icon contaminacion">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="amenaza-content">
+                            <h4>Contaminación</h4>
+                            <p>Desechos sólidos, aguas residuales y químicos agrícolas</p>
+                            <div class="impact-bar">
+                                <div class="impact-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amenaza-item">
+                        <div class="amenaza-icon acuicultura">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <div class="amenaza-content">
+                            <h4>Camaronicultura</h4>
+                            <p>Conversión de manglares en estanques camaroneros</p>
+                            <div class="impact-bar">
+                                <div class="impact-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amenaza-item">
+                        <div class="amenaza-icon clima">
+                            <i class="fas fa-temperature-high"></i>
+                        </div>
+                        <div class="amenaza-content">
+                            <h4>Cambio Climático</h4>
+                            <p>Aumento del nivel del mar y eventos extremos</p>
+                            <div class="impact-bar">
+                                <div class="impact-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPROMISO -->
+    <section class="compromiso-section">
+        <div class="compromiso-content">
+            <div class="compromiso-image">
+                <img src="imagenes/restauracion-manglar.jpg" alt="Restauración de manglares">
+                <div class="image-overlay">
+                    <div class="overlay-stats">
+                        <div class="overlay-stat">
+                            <strong>Meta 2030</strong>
+                            <span>5,000 hectáreas restauradas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="compromiso-text">
+                <span class="section-tag">Acción</span>
+                <h2>Compromiso Nacional con la Restauración</h2>
+                <p>
+                    Panamá se ha unido a iniciativas internacionales como el Desafío de Bonn 
+                    y la Iniciativa 20x20, comprometiéndose a restaurar miles de hectáreas 
+                    de manglares como parte de su Contribución Nacionalmente Determinada (NDC) 
+                    ante el cambio climático.
+                </p>
+                <div class="logros-grid">
+                    <div class="logro-item">
+                        <i class="fas fa-seedling"></i>
+                        <div>
+                            <strong>Reforestación Activa</strong>
+                            <p>Programas en Darién, Bocas del Toro y Chiriquí</p>
+                        </div>
+                    </div>
+                    <div class="logro-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>Participación Comunitaria</strong>
+                            <p>Más de 100 comunidades involucradas</p>
+                        </div>
+                    </div>
+                    <div class="logro-item">
+                        <i class="fas fa-microscope"></i>
+                        <div>
+                            <strong>Investigación Científica</strong>
+                            <p>Alianzas con universidades nacionales e internacionales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA INTERACTIVO -->
+    <section class="section mapa-section" id="mapa">
+        <div class="section-header">
+            <span class="section-tag">Explora</span>
+            <h2>Mapa Interactivo de Manglares</h2>
+            <p class="section-description">
+                Descubre la ubicación de los principales manglares de Panamá, 
+                sus características y el estado de conservación.
+            </p>
+        </div>
+
+        <!-- PANEL DE FILTROS -->
+        <div class="mapa-filtros">
+            <!-- Búsqueda por nombre -->
+            <div class="filtro-grupo filtro-busqueda">
+                <label><i class="fas fa-search"></i> Buscar</label>
+                <input type="text" id="buscar-manglar" placeholder="Nombre del manglar..." autocomplete="off">
+            </div>
+
+            <!-- Filtro por costa -->
+            <div class="filtro-grupo">
+                <label><i class="fas fa-water"></i> Costa</label>
+                <div class="filtro-btns-grupo">
+                    <button class="mapa-filtro-btn active" data-filtro-costa="todos">Todas</button>
+                    <button class="mapa-filtro-btn" data-filtro-costa="pacifico">🌊 Pacífico</button>
+                    <button class="mapa-filtro-btn" data-filtro-costa="caribe">🐠 Caribe</button>
+                </div>
+            </div>
+
+            <!-- Filtro por estado -->
+            <div class="filtro-grupo">
+                <label><i class="fas fa-shield-alt"></i> Estado</label>
+                <div class="filtro-btns-grupo">
+                    <button class="mapa-filtro-btn active" data-filtro-estado="todos">Todos</button>
+                    <button class="mapa-filtro-btn" data-filtro-estado="protegido">🟢 Protegido</button>
+                    <button class="mapa-filtro-btn" data-filtro-estado="amenazado">🟠 Amenazado</button>
+                    <button class="mapa-filtro-btn" data-filtro-estado="restauracion">🔵 Restauración</button>
+                </div>
+            </div>
+
+            <!-- Filtro por tamaño -->
+            <div class="filtro-grupo">
+                <label><i class="fas fa-expand-alt"></i> Tamaño</label>
+                <div class="filtro-btns-grupo">
+                    <button class="mapa-filtro-btn active" data-filtro-tamano="todos">Todos</button>
+                    <button class="mapa-filtro-btn" data-filtro-tamano="pequeno">Pequeño</button>
+                    <button class="mapa-filtro-btn" data-filtro-tamano="mediano">Mediano</button>
+                    <button class="mapa-filtro-btn" data-filtro-tamano="grande">Grande</button>
+                </div>
+            </div>
+
+            <!-- Contador de resultados y reset -->
+            <div class="filtro-grupo filtro-acciones">
+                <span id="contador-manglares" class="contador-label">15 manglares</span>
+                <button id="reset-filtros" class="btn-reset-filtros"><i class="fas fa-times"></i> Limpiar</button>
+            </div>
+        </div>
+
+        <div class="mapa-container">
+            <div id="map"></div>
+            <!-- Panel de no resultados -->
+            <div id="mapa-sin-resultados" style="display:none;">
+                <i class="fas fa-search"></i>
+                <p>No se encontraron manglares con esos filtros</p>
+            </div>
+            <div class="mapa-legend">
+                <h4>Leyenda</h4>
+                <div class="legend-item">
+                    <span class="legend-marker protegido"></span>
+                    <span>Área Protegida</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker amenazado"></span>
+                    <span>Bajo Amenaza</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker restauracion"></span>
+                    <span>En Restauración</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mapa-info">
+            <div class="info-box">
+                <i class="fas fa-info-circle"></i>
+                <p>Haz clic en los marcadores para ver información detallada, imágenes y datos de cada zona de manglares.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO AYUDAR -->
+    <section class="section accion-section" id="accion">
+        <div class="section-header">
+            <span class="section-tag">Actúa</span>
+            <h2>¿Cómo Puedes Ayudar?</h2>
+            <p class="section-description">
+                La conservación de los manglares es responsabilidad de todos. 
+                Aquí te mostramos cómo puedes contribuir.
+            </p>
+        </div>
+
+        <div class="accion-grid">
+            <div class="accion-card">
+                <div class="accion-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Voluntariado</h3>
+                <p>Únete a jornadas de limpieza y reforestación en zonas costeras. Cada propágulo plantado cuenta.</p>
+                <a href="https://lac.wetlands.org/caso/red-de-voluntariado-de-wetlands-international/" class="accion-link">Buscar oportunidades <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="accion-card">
+                <div class="accion-icon">
+                    <i class="fas fa-donate"></i>
+                </div>
+                <h3>Donaciones</h3>
+                <p>Apoya organizaciones locales que trabajan en la protección y restauración de manglares.</p>
+                <a href="https://www.ppdpanama.org/" class="accion-link">Organizaciones <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="accion-card">
+                <div class="accion-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Educación</h3>
+                <p>Comparte este conocimiento con tu comunidad, escuela o empresa. La información es poder.</p>
+                <a href="https://miambiente.gob.pa/calendario-ambiental-2025/" class="accion-link">Recursos educativos <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="accion-card">
+                <div class="accion-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <h3>Consumo Responsable</h3>
+                <p>Elige productos del mar sostenibles y reduce el uso de plásticos que terminan en nuestras costas.</p>
+                <a href="https://www.laestrella.com.pa/amp/economia/exportaciones-de-productos-del-mar-se-consolidan-con-enfoque-sostenible-HF14228618?utm_source=chatgpt.com" class="accion-link">Guía de consumo <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="accion-card">
+                <div class="accion-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>Turismo Ecológico</h3>
+                <p>Visita manglares de manera responsable y apoya a comunidades locales que los protegen.</p>
+                <a href="https://www.laestrella.com.pa/vida-y-cultura/destino-estrella/ruta-manglar-isla-canas-apuesta-KJLE449939?utm_source=chatgpt.com" class="accion-link">Tours disponibles <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="accion-card">
+                <div class="accion-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>Activismo</h3>
+                <p>Firma peticiones, contacta a tus representantes y exige políticas de protección ambiental.</p>
+                <a href="https://ancon.org/" class="accion-link">Campañas activas <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- ORGANIZACIONES -->
+        <div class="organizaciones">
+            <h3>Aliados y Fuentes de Información</h3>
+            <h2>Instituciones que protegen nuestros ecosistemas y respaldan nuestro contenido</h2>
+            <div class="org-grid">
+                <div class="org-card">
+                    <h4>MarViva</h4>
+                    <p>Conservación marina y costera en el Pacífico Oriental Tropical</p>
+                    <a href="https://marviva.net" target="_blank" class="org-link">marviva.net</a>
+                </div>
+                <div class="org-card">
+                    <h4>ANCON</h4>
+                    <p>Asociación Nacional para la Conservación de la Naturaleza</p>
+                    <a href="https://ancon.org" target="_blank" class="org-link">ancon.org</a>
+                </div>
+                <div class="org-card">
+                    <h4>Fundación Natura</h4>
+                    <p>Desarrollo sostenible y conservación de ecosistemas</p>
+                    <a href="#" target="_blank" class="org-link">natura.org.pa</a>
+                </div>
+                <div class="org-card">
+                    <h4>Wetlands International</h4>
+                    <p>Restauración de humedales y manglares en Centroamérica</p>
+                    <a href="https://www.wetlands.org" target="_blank" class="org-link">wetlands.org</a>
+                </div>
+                <div class="org-card">
+                    <h4>Smithsonian Tropical Research Institute</h4>
+                    <p>Investigación científica sobre ecosistemas tropicales</p>
+                    <a href="https://stri.si.edu" target="_blank" class="org-link">stri.si.edu</a>
+                </div>
+                <div class="org-card">
+                    <h4>Ministerio de Ambiente</h4>
+                    <p>Políticas nacionales de conservación y manejo</p>
+                    <a href="https://www.miambiente.gob.pa" target="_blank" class="org-link">miambiente.gob.pa</a>
+                </div>
+                 <div class="org-card">
+                    <h4>wikipedia</h4>
+                    <p>Fuente de información e ilustraciones de esta página</p>
+                    <a href="https://www.wikipedia.org/" target="_blank" class="org-link">wikipedia.org</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTICIAS / BLOG -->
+    <section class="section blog-section">
+        <div class="section-header">
+            <span class="section-tag">Actualidad</span>
+            <h2>Últimas Noticias y Proyectos</h2>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card featured">
+                <div class="blog-image">
+                    <img src="imagenes/noticia1.png" alt="Restauración">
+                    <span class="blog-badge">Destacado</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> Marzo 2025</span>
+                        <span><i class="fas fa-tag"></i> Restauración</span>
+                    </div>
+                    <h3>Semillas para un futuro</h3>
+                    <p>Un curso para conocer la biodiversidad de nuestros bosques, A través de un curso de dendrología, el estudio de la taxonomía de plantas leñosas en ausencia de flores o frutos, dos expertos en diversidad forestal buscan dejar un legado de conocimiento para futuras generaciones.</p>
+                    <a href="https://stri.si.edu/es/noticia/semillas-para-un-futuro" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="imagenes/noticia2.png" alt="Investigación">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> Enero 2024</span>
+                        <span><i class="fas fa-tag"></i> Investigación</span>
+                    </div>
+                    <h3>Bosque desenterrado</h3>
+                    <p>Un bosque de manglares extinto es descubierto en la isla Barro Colorado de Panamá.</p>
+                    <a href="https://stri.si.edu/es/noticia/bosque-desenterrado" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="imagenes/noticia3.png" alt="Reporte">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> Septiembre 2025</span>
+                        <span><i class="fas fa-tag"></i> Reporte</span>
+                    </div>
+                    <h3>Falla en Afloramiento</h3>
+                    <p>Por primera vez en los registros, las aguas frías y ricas en nutrientes del Golfo de Panamá no surgieron durante la estación seca.</p>
+                    <a href="https://stri.si.edu/es/noticia/falla-en-afloramiento" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-seedling"></i> Manglares de Panamá</h3>
+                <p>Proyecto educativo dedicado a la conservación y difusión del conocimiento sobre los ecosistemas de manglar en Panamá.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Explora</h4>
+                <ul>
+                    <li><a href="#importancia">Importancia</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#datos">Datos</a></li>
+                    <li><a href="#mapa">Mapa Interactivo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Participa</h4>
+                <ul>
+                    <li><a href="#accion">Voluntariado</a></li>
+                    <li><a href="#accion">Donaciones</a></li>
+                    <li><a href="#accion">Recursos Educativos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Manglares de Panamá. Proyecto educativo y ambiental sin fines de lucro.</p>
+            <p>Desarrollado con 💚 por la conservación de nuestros ecosistemas</p>
+            <p>Contenido basado en fuentes oficiales y organizaciones ambientales nacionales e internacionales.</p>
+        </div>
+    </footer>
+
+    <!-- LEAFLET JS PARA MAPA -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
