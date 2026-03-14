@@ -521,10 +521,35 @@ function showToast(msg, type='') {
 
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  // Bottom nav (mobile)
+  document.querySelectorAll('.bottom-tab[data-tab]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.bottom-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      // sincronizar tab del navbar
+      const navTab = document.querySelector(`.tab[data-tab="${btn.dataset.tab}"]`);
+      if (navTab) navTab.classList.add('active');
+      $('searchInput').value = '';
+      $('searchClear').classList.remove('visible');
+      loadTab(btn.dataset.tab, 1);
+    });
+  });
+
+  $('bottomMyList').addEventListener('click', () => {
+    document.querySelectorAll('.bottom-tab').forEach(t => t.classList.remove('active'));
+    $('bottomMyList').classList.add('active');
+    if (!state.user) { openAuthModal('login'); return; }
+    openMyList();
+  });
+
   // Logo → inicio
   $('logoBtn').addEventListener('click', () => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.querySelector('.tab[data-tab="popular"]').classList.add('active');
+    document.querySelectorAll('.bottom-tab').forEach(t => t.classList.remove('active'));
+    const bt = document.querySelector('.bottom-tab[data-tab="popular"]');
+    if (bt) bt.classList.add('active');
     $('searchInput').value = '';
     $('searchClear').classList.remove('visible');
     loadTab('popular', 1);
@@ -534,7 +559,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.tab').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.bottom-tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
+      const bt = document.querySelector(`.bottom-tab[data-tab="${btn.dataset.tab}"]`);
+      if (bt) bt.classList.add('active');
       $('searchInput').value = '';
       $('searchClear').classList.remove('visible');
       loadTab(btn.dataset.tab, 1);
