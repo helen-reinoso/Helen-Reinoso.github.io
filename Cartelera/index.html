@@ -11,34 +11,35 @@
 </head>
 <body>
 
-  <!-- NAV -->
+   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-left">
       <div class="logo" id="logoBtn" style="cursor:pointer">
+        <span class="logo-icon">🎬</span>
         <span class="logo-text">CINE<span class="logo-accent">MAX</span></span>
       </div>
     </div>
-
+ 
     <div class="nav-center">
       <button class="tab active" data-tab="popular"><span class="tab-icon">📈</span> Populares</button>
       <button class="tab" data-tab="now_playing"><span class="tab-icon">🎭</span> En Cartelera</button>
       <button class="tab" data-tab="top_rated"><span class="tab-icon">⭐</span> Mejor Valoradas</button>
       <button class="tab" data-tab="upcoming"><span class="tab-icon">📅</span> Próximamente</button>
     </div>
-
+ 
     <div class="nav-right">
       <div class="search-box">
         <span class="search-icon">🔍</span>
         <input type="text" id="searchInput" placeholder="Buscar películas...">
         <button class="search-clear" id="searchClear">✕</button>
       </div>
-
+ 
       <!-- Si NO está logueado -->
       <div id="authButtons">
         <button class="btn-auth" onclick="openAuthModal('login')">Iniciar sesión</button>
         <button class="btn-auth accent" onclick="openAuthModal('register')">Registrarse</button>
       </div>
-
+ 
       <!-- Si SÍ está logueado -->
       <div id="userMenu" class="hidden">
         <button class="user-btn" id="userMenuBtn">
@@ -55,15 +56,15 @@
             </div>
           </div>
           <hr class="dropdown-divider">
-          <button class="dropdown-item" onclick="openMyList()">Mi Lista</button>
+          <button class="dropdown-item" onclick="openMyList()">🎬 Mi Lista</button>
           <button class="dropdown-item logout" onclick="doLogout()">← Cerrar sesión</button>
         </div>
       </div>
-
+ 
       <button class="theme-btn" id="themeBtn">☀️</button>
     </div>
   </nav>
-
+ 
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-backdrop" id="heroBg"></div>
@@ -78,7 +79,7 @@
     </div>
     <div class="hero-indicators" id="heroIndicators"></div>
   </section>
-
+ 
   <!-- MAIN -->
   <main id="mainContent">
     <div class="section-header">
@@ -94,7 +95,7 @@
     </div>
     <div class="pagination" id="pagination"></div>
   </main>
-
+ 
   <!-- SEARCH -->
   <main id="searchContent" class="hidden">
     <div class="section-header">
@@ -102,7 +103,7 @@
     </div>
     <div class="movies-grid" id="searchGrid"></div>
   </main>
-
+ 
   <!-- MI LISTA -->
   <main id="myListContent" class="hidden">
     <div class="section-header">
@@ -114,7 +115,7 @@
     </div>
     <div class="movies-grid" id="myListGrid"></div>
   </main>
-
+ 
   <!-- MODAL PELÍCULA -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
@@ -122,12 +123,12 @@
       <div id="modalContent"></div>
     </div>
   </div>
-
+ 
   <!-- MODAL AUTH (Login / Registro) -->
   <div class="modal-overlay" id="authOverlay">
     <div class="modal auth-modal" id="authModal">
       <button class="modal-close" onclick="closeAuthModal()">✕</button>
-
+ 
       <!-- LOGIN -->
       <div id="loginForm">
         <div class="auth-header">
@@ -149,11 +150,11 @@
           <p class="auth-switch">¿No tienes cuenta? <a href="#" onclick="switchAuth('register')">Regístrate</a></p>
         </div>
       </div>
-
+ 
       <!-- REGISTRO -->
       <div id="registerForm" class="hidden">
         <div class="auth-header">
-          <div class="auth-logo"> CINE<span>MAX</span></div>
+          <div class="auth-logo">🎬 CINE<span>MAX</span></div>
           <h2 class="auth-title">Crea tu cuenta</h2>
           <p class="auth-sub">Gratis, sin tarjeta requerida</p>
         </div>
@@ -175,13 +176,39 @@
           <p class="auth-switch">¿Ya tienes cuenta? <a href="#" onclick="switchAuth('login')">Inicia sesión</a></p>
         </div>
       </div>
-
+ 
     </div>
   </div>
-
+ 
+  <!-- BOTTOM NAV (mobile) -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav-inner">
+      <button class="bottom-tab active" data-tab="popular">
+        <span class="bt-icon">📈</span>
+        Populares
+      </button>
+      <button class="bottom-tab" data-tab="now_playing">
+        <span class="bt-icon">🎭</span>
+        Cartelera
+      </button>
+      <button class="bottom-tab" data-tab="top_rated">
+        <span class="bt-icon">⭐</span>
+        Top
+      </button>
+      <button class="bottom-tab" data-tab="upcoming">
+        <span class="bt-icon">📅</span>
+        Próximo
+      </button>
+      <button class="bottom-tab" id="bottomMyList">
+        <span class="bt-icon">🎬</span>
+        Mi Lista
+      </button>
+    </div>
+  </nav>
+ 
   <!-- TOAST -->
   <div class="toast" id="toast"></div>
-
+ 
   <script src="app.js"></script>
 </body>
 </html>
