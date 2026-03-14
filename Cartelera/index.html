@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMax · Cartelera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="https://images.icon-icons.com/810/PNG/512/film_projector_cinema_icon-icons.com_66132.png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-left">
+      <div class="logo" id="logoBtn" style="cursor:pointer">
+        <span class="logo-text">CINE<span class="logo-accent">MAX</span></span>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <button class="tab active" data-tab="popular"><span class="tab-icon">📈</span> Populares</button>
+      <button class="tab" data-tab="now_playing"><span class="tab-icon">🎭</span> En Cartelera</button>
+      <button class="tab" data-tab="top_rated"><span class="tab-icon">⭐</span> Mejor Valoradas</button>
+      <button class="tab" data-tab="upcoming"><span class="tab-icon">📅</span> Próximamente</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Buscar películas...">
+        <button class="search-clear" id="searchClear">✕</button>
+      </div>
+
+      <!-- Si NO está logueado -->
+      <div id="authButtons">
+        <button class="btn-auth" onclick="openAuthModal('login')">Iniciar sesión</button>
+        <button class="btn-auth accent" onclick="openAuthModal('register')">Registrarse</button>
+      </div>
+
+      <!-- Si SÍ está logueado -->
+      <div id="userMenu" class="hidden">
+        <button class="user-btn" id="userMenuBtn">
+          <div class="user-avatar" id="userAvatar">H</div>
+          <span id="userNameNav">Helen</span>
+          <span class="chevron">▾</span>
+        </button>
+        <div class="user-dropdown" id="userDropdown">
+          <div class="dropdown-header">
+            <div class="user-avatar big" id="userAvatarDrop">H</div>
+            <div>
+              <div class="dropdown-name" id="dropdownName">Helen</div>
+              <div class="dropdown-email" id="dropdownEmail">helen@email.com</div>
+            </div>
+          </div>
+          <hr class="dropdown-divider">
+          <button class="dropdown-item" onclick="openMyList()">Mi Lista</button>
+          <button class="dropdown-item logout" onclick="doLogout()">← Cerrar sesión</button>
+        </div>
+      </div>
+
+      <button class="theme-btn" id="themeBtn">☀️</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-backdrop" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-skeleton">
+        <div class="sk-line sk-title"></div>
+        <div class="sk-line sk-meta"></div>
+        <div class="sk-line sk-desc"></div>
+        <div class="sk-line sk-desc short"></div>
+      </div>
+    </div>
+    <div class="hero-indicators" id="heroIndicators"></div>
+  </section>
+
+  <!-- MAIN -->
+  <main id="mainContent">
+    <div class="section-header">
+      <h2 class="section-title" id="sectionTitle"><span>Populares</span> esta semana</h2>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+    <div class="movies-grid" id="moviesGrid">
+      <div class="card-skeleton"></div><div class="card-skeleton"></div>
+      <div class="card-skeleton"></div><div class="card-skeleton"></div>
+      <div class="card-skeleton"></div><div class="card-skeleton"></div>
+      <div class="card-skeleton"></div><div class="card-skeleton"></div>
+      <div class="card-skeleton"></div><div class="card-skeleton"></div>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <!-- SEARCH -->
+  <main id="searchContent" class="hidden">
+    <div class="section-header">
+      <h2 class="section-title" id="searchTitle">Resultados</h2>
+    </div>
+    <div class="movies-grid" id="searchGrid"></div>
+  </main>
+
+  <!-- MI LISTA -->
+  <main id="myListContent" class="hidden">
+    <div class="section-header">
+      <h2 class="section-title">Mi <span>Lista</span></h2>
+      <div class="list-tabs">
+        <button class="list-tab active" data-list="saved" onclick="switchListTab('saved', this)">📌 Guardadas</button>
+        <button class="list-tab" data-list="watched" onclick="switchListTab('watched', this)">✅ Vistas</button>
+      </div>
+    </div>
+    <div class="movies-grid" id="myListGrid"></div>
+  </main>
+
+  <!-- MODAL PELÍCULA -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- MODAL AUTH (Login / Registro) -->
+  <div class="modal-overlay" id="authOverlay">
+    <div class="modal auth-modal" id="authModal">
+      <button class="modal-close" onclick="closeAuthModal()">✕</button>
+
+      <!-- LOGIN -->
+      <div id="loginForm">
+        <div class="auth-header">
+          <div class="auth-logo">🎬 CINE<span>MAX</span></div>
+          <h2 class="auth-title">Bienvenido de nuevo</h2>
+          <p class="auth-sub">Inicia sesión para acceder a tu lista</p>
+        </div>
+        <div class="auth-body">
+          <div class="field-group">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="tu@email.com" autocomplete="email">
+          </div>
+          <div class="field-group">
+            <label>Contraseña</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password">
+          </div>
+          <div class="auth-error hidden" id="loginError"></div>
+          <button class="btn-submit" id="loginBtn" onclick="doLogin()">Iniciar sesión</button>
+          <p class="auth-switch">¿No tienes cuenta? <a href="#" onclick="switchAuth('register')">Regístrate</a></p>
+        </div>
+      </div>
+
+      <!-- REGISTRO -->
+      <div id="registerForm" class="hidden">
+        <div class="auth-header">
+          <div class="auth-logo"> CINE<span>MAX</span></div>
+          <h2 class="auth-title">Crea tu cuenta</h2>
+          <p class="auth-sub">Gratis, sin tarjeta requerida</p>
+        </div>
+        <div class="auth-body">
+          <div class="field-group">
+            <label>Nombre de usuario</label>
+            <input type="text" id="regName" placeholder="Tu nombre" autocomplete="name">
+          </div>
+          <div class="field-group">
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="tu@email.com" autocomplete="email">
+          </div>
+          <div class="field-group">
+            <label>Contraseña</label>
+            <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+          </div>
+          <div class="auth-error hidden" id="registerError"></div>
+          <button class="btn-submit" id="registerBtn" onclick="doRegister()">Crear cuenta</button>
+          <p class="auth-switch">¿Ya tienes cuenta? <a href="#" onclick="switchAuth('login')">Inicia sesión</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
